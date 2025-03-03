@@ -4,18 +4,18 @@ The **[LangDB.ai provider](https://sdk.vercel.ai/providers/ai-sdk-providers/lang
 
 ## Setup
 
-The LangDB.ai provider is available in the `@ai-sdk/langdb` module. You can install it with
+The LangDB.ai provider is available in the `langdb/vercel-provider` module. You can install it with
 
 ```bash
-npm i @ai-sdk/langdb
+npm i langdb/vercel-provider
 ```
 
 ## Provider Instance
 
-You can import the default provider instance `langDB` from `@ai-sdk/langdb`:
+You can import the default provider instance `langDB` from `langdb/vercel-provider`:
 
 ```ts
-import { langDB } from '@ai-sdk/langdb';
+import { langDB } from 'langdb/vercel-provider';
 ```
 
 ## Example
@@ -25,7 +25,7 @@ import { langDB } from '@ai-sdk/langdb';
 You can generate text using LangDB.ai models:
 
 ```ts
-import { langDB } from '@ai-sdk/langdb';
+import { langDB } from 'langdb/vercel-provider';
 import { generateText } from 'ai';
 
 const { text } = await generateText({
@@ -41,7 +41,7 @@ console.log(text);
 You can also generate images using LangDB.ai's image models:
 
 ```ts
-import { langDB } from '@ai-sdk/langdb';
+import { langDB } from 'langdb/vercel-provider';
 import { experimental_generateImage as generateImage } from 'ai';
 import fs from 'fs';
 import path from 'path';
@@ -61,7 +61,7 @@ console.log(`Image saved to: ${imagePath}`);
 You can also generate text embeddings
 
 ```ts
-import { langDB } from '@ai-sdk/langdb';
+import { langDB } from 'langdb/vercel-provider';
 import { embed } from 'ai';
 
 const { embedding } = await embed({

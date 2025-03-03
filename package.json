@@ -1,6 +1,11 @@
 {
-  "name": "@ai-sdk/langdb",
-  "version": "0.1.11",
+  "name": "langdb/vercel-provider",
+  "author": {
+    "name": "Mrunmay Shelar",
+    "email": "mrunmay@langdb.ai",
+    "url": "https://langdb.ai"
+  },
+  "version": "0.1.0",
   "license": "Apache-2.0",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -30,16 +35,15 @@
     }
   },
   "dependencies": {
-    "@ai-sdk/openai-compatible": "0.1.10",
-    "@ai-sdk/provider": "1.0.7",
-    "@ai-sdk/provider-utils": "2.1.8"
+    "@ai-sdk/openai-compatible": "^0.1.10",
+    "@ai-sdk/provider": "^1.0.7",
+    "@ai-sdk/provider-utils": "^2.1.8"
   },
   "devDependencies": {
     "@types/node": "^18",
-    "@vercel/ai-tsconfig": "workspace:*",
     "tsup": "^8",
-    "typescript": "5.6.3",
-    "zod": "3.23.8"
+    "typescript": "^5.6.3",
+    "zod": "^3.23.8"
   },
   "peerDependencies": {
     "zod": "^3.0.0"
@@ -50,15 +54,16 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://sdk.vercel.ai/docs",
+  "homepage": "https://docs.langdb.ai/guides/vercel-ai-sdk",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vercel/ai.git"
+    "url": "git+https://github.com/langdb/vercel-provider"
   },
   "bugs": {
-    "url": "https://github.com/vercel/ai/issues"
+    "url": "https://github.com/langdb/vercel-provider/issues"
   },
   "keywords": [
+    "langdb",
     "ai"
   ]
 }
