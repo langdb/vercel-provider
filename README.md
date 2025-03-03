@@ -15,7 +15,17 @@ npm i langdb/vercel-provider
 You can import the default provider instance `langDB` from `langdb/vercel-provider`:
 
 ```ts
-import { langDB } from 'langdb/vercel-provider';
+import { createLangDB } from 'langdb/vercel-provider';
+import { v4 as uuidv4 } from 'uuid';
+
+const langDB = createLangDB(
+  apiKey: 'your_api_key',
+  projectId: 'your_project_id',
+  threadId: uuidv4(),
+  runId: uuidv4(),
+  label: 'scientist',
+);
+
 ```
 
 ## Example
@@ -25,8 +35,16 @@ import { langDB } from 'langdb/vercel-provider';
 You can generate text using LangDB.ai models:
 
 ```ts
-import { langDB } from 'langdb/vercel-provider';
+import { createLangDB } from 'langdb/vercel-provider';
 import { generateText } from 'ai';
+
+const langDB = createLangDB(
+  apiKey: 'your_api_key',
+  projectId: 'your_project_id',
+  threadId: uuidv4(),
+  runId: uuidv4(),
+  label: 'scientist',
+);
 
 const { text } = await generateText({
   model: langDB('openai/gpt-4o-mini'),
@@ -41,7 +59,6 @@ console.log(text);
 You can also generate images using LangDB.ai's image models:
 
 ```ts
-import { langDB } from 'langdb/vercel-provider';
 import { experimental_generateImage as generateImage } from 'ai';
 import fs from 'fs';
 import path from 'path';
@@ -61,7 +78,6 @@ console.log(`Image saved to: ${imagePath}`);
 You can also generate text embeddings
 
 ```ts
-import { langDB } from 'langdb/vercel-provider';
 import { embed } from 'ai';
 
 const { embedding } = await embed({
@@ -74,4 +90,4 @@ console.log('Embedding:', embedding);
 
 ## Documentation
 
-Please check out the **[LangDB provider](https://sdk.vercel.ai/providers/ai-sdk-providers/langdb)** for more information.
+Please check out the **[LangDB provider Documentation](https://docs.langdb.ai/guides/vercel-ai-sdk)** for more information.
