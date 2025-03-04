@@ -1,10 +1,10 @@
 # AI SDK - LangDB.ai Provider
 
-The **[LangDB.ai provider](https://sdk.vercel.ai/providers/ai-sdk-providers/langdb)** for the [AI SDK](https://sdk.vercel.ai/docs) contains language model support for the [LangDB.ai](https://langdb.ai) platform.
+The **[LangDB provider](https://sdk.vercel.ai/providers/ai-sdk-providers/langdb)** for the [AI SDK](https://sdk.vercel.ai/docs) contains language model support for the [LangDB AI Gateway](https://langdb.ai) platform.
 
 ## Setup
 
-The LangDB.ai provider is available in the `langdb/vercel-provider` module. You can install it with
+The LangDB provider is available in the `langdb/vercel-provider` module. You can install it with
 
 ```bash
 npm i langdb/vercel-provider
@@ -12,7 +12,6 @@ npm i langdb/vercel-provider
 
 ## Provider Instance
 
-You can import the default provider instance `langDB` from `langdb/vercel-provider`:
 
 ```ts
 import { createLangDB } from 'langdb/vercel-provider';
